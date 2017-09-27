@@ -8,5 +8,9 @@ namespace ComicBookGallary.Controllers
 {
     public class ComicBookController:Controller
     {
+        public string Detail()
+        {
+            return "Welcome to MVC - This is a controller message.";
+        }
     }
 }
