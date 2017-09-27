@@ -12,9 +12,18 @@ namespace ComicBookGallary.Controllers
         {
             return "This is Index from the Controller";
         }
-        public string Detail()
+        public ActionResult  Detail()
         {
-            return "Welcome to MVC - This is a controller message.";
+            if(DateTime.Today.DayOfWeek == DayOfWeek.Wednesday)
+            {
+                return Redirect("/ComicBook/Index");
+            }
+
+            return Content ("Welcome to MVC - This is a controller message.");
+           
+           
         }
+
+
     }
 }
